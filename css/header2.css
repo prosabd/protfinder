@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* Barre de navigation */
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 2;
+}
+nav img {
+    height: 40px;
+    margin-right: -700px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+nav h1{
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+nav .onglets{
+    display: flex;
+    flex-wrap:wrap;
+}
+nav .onglets p{
+    font-size: 17px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+nav .onglets input{
+    width: 500px;
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px;
+    border:none;
+    background-color: #f2f2f2;
+    outline:none;
+}
+nav .onglets .cherch {
+    margin-right: 200px;
+    margin-left: -500px;
+}
+nav .onglets .ongl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+/* Fin de la barre de navigation */
+
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+

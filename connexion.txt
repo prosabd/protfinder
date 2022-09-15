@@ -1,0 +1,57 @@
+<?php
+require_once("db.php");
+?>
+
+<?php
+$_SESSION["identite"] = null;
+
+if (count($_POST) > 0) {
+    $email = $_POST["email"];
+    $mdp = $_POST["mdp"];
+
+
+    $sql ="insert into clients values(null, '" . $email . "','" . $mdp . "')";
+    mysqli_query($conn, $sql);
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <link rel="shortcut icon" href="logourl.PNG">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+</head>
+<body>
+    <form action="inscription.php" method="POST">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo" width="300">
+        </div>
+        <h1>Inscription</h1>
+        <div class="emailsmy">
+            <p class="choose-email">Email</p>
+            <p class="my-accounts">My accounts</p>
+        </div>
+        <div class="inputs">
+            <input type="email" placeholder="Your email" id="email" name="email"/>
+            <div class="passwordfp">
+            <p class="password">Password</p>
+            <p class="fp">Forgot password?</p>
+        </div>
+        <input type="password" placeholder="Password" id="mdp" name="mdp"/>
+        </div>
+
+        <div class="button">
+            <center><button  type="submit" name="submit" >Login</button></center>
+        </div>
+
+
+
+
+        <center><p class="inscription">I have an account, <span>login now!</span></p></center>
+    </form>
+</body>
+</html>

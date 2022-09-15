@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    overflow-x: hidden;
+    margin:0px;
+    padding: 0px;
+    background: #f6f5f7;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.divproduit{
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 50px;
+
+
+}
+
+
+.produit{
+
+    width: 1000px;
+    height: 500px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    /*
+    display: flex;
+    padding: 7%;
+    margin-top: 5px;
+    border:none;
+    border-color: black;*/
+    /*
+    background-color: #f2f2f2;
+    left: 40px;
+    padding: 7%;
+    border-color: grey;
+    border-radius: 150px;
+    -webkit-animation: flip-diagonal-1-fwd 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) ;
+    animation: flip-diagonal-1-fwd 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) ;
+*/
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100% 1fr 64px;
+    gap: 1rem;
+
+
+}
+
+.imgproduit{
+    margin-right: 50px;
+    margin-left: 55px;
+    margin-top: 20%;
+    height: 300px;
+
+    padding: 10px;
+
+}
+
+.infosproduit{
+
+    padding: 30px;
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nameproduit{
+
+    font-family: 'Chakra Petch', sans-serif;
+    font-min-size: 30px;
+    font-max-size: 200px;
+    font-size: xx-large;
+    margin-bottom: 25px;
+
+}
+
+
+.prixproduit{
+
+    font-family: 'Chakra Petch', sans-serif;
+    font-min-size: 30px;
+    font-max-size: 200px;
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+.categorieproduit{
+    margin-top: 7%;
+    font-size: 15px;
+}
+
+.buttonaddtocart{
+    padding:0;
+    margin:0;
+    margin-top: 50px;
+    height:100px;
+    width:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+}
+
+.fas fa-cart{
+    background:#3e94f5;
+}
+
+#addtocart{
+    display:block;
+    padding:0.5em 1em 0.5em 1em;
+    border-radius:100px;
+    border:none;
+    font-size:2em;
+    position:relative;
+    background:#3e94f5;
+    cursor:pointer;
+    height:2em;
+    width:10em;
+    overflow:hidden;
+    transition:transform 0.1s;
+    z-index:1;
+
+
+    box-sizing:border-box;
+    outline:none;
+
+}
+
+
+.addtocart:hover{
+    transform:scale(1.1);
+}
+
+
+.addItem{
+    color:#fff;
+    background:#3e94f5;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Quicksand', sans-serif;
+    z-index: -2;
+}
+
+.infosproduit i{
+    margin-right:10px;
+}
+.addedItem{
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #fff;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius: 400px;
+    transition:transform 0.3s ease;
+    z-index: -1;
+
+    transform:translate(-110%) skew(-40deg);
+}
+.posttext{
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #ff4743, #ff435f);
+    background: linear-gradient(to right, #ff4743, #ff435f);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+    top: 25%;
+}
+.fas fa-check{
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #ff4743, #ff435f);
+    background: linear-gradient(to right, #ff4743, #ff435f);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+#more {display: none;}
+
+
+a:link {
+    text-decoration: black;
+}
+a:visited {
+    color: black;
+}
+
+
+.buttonaddtocart button {
+    padding: 20px;
+    border: none;
+    background: lighten(#292d48, 65);
+    position: relative;
+    outline: none;
+    border-radius: 5px;
+    color: #292d48;
+    font-size: 18px;
+}
+.buttonaddtocart .cart-item {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -10px;
+    right: -10px;
+    z-index: 3;
+}
+.buttonaddtocart .cart-item :before {
+    content:'1';
+    display:block;
+    line-height:24px;
+    height:24px;
+    width:24px;
+    font-size:12px;
+    font-weight:600;
+    background:#2bd156;
+    color:white;
+    border-radius:20px;
+    text-align:center;
+    z-index: 3;
+}
+.buttonaddtocart .sendtocart .cart-item{
+                    display:block;
+                    animation: xAxis 1s forwards cubic-bezier(1.000,0.440,0.840,0.165);
+.buttonaddtocart .sendtocart .cart-item:before {
+                      animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    }
+
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #292d48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.cart i {
+        font-size:25px;
+        color:white;
+}
+.cart i:before {
+         content:attr(data-totalitems);
+         font-size:12px;
+         font-weight:600;
+         position:absolute;
+         top:-12px;
+         right:-12px;
+         background:#2bd156;
+         line-height:24px;
+         padding:0 5px;
+         height:24px;
+         min-width:24px;
+         color:white;
+         text-align:center;
+         border-radius:24px;
+}
+.cart i .shake {
+         animation: shakeCart .4s ease-in-out forwards;
+}
+
+
+@keyframes xAxis {
+    100% {
+        transform: translateX(calc(50vw - 105px));
+    }
+}
+
+@keyframes yAxis {
+    100% {
+        transform: translateY(calc(-50vh + 75px));
+    }
+}
+
+@keyframes shakeCart {
+    25% {
+        transform:translateX(6px)
+    }
+    50% {
+        transform:translateX(-4px);
+    }
+    75% {
+        transform:translateX(2px);
+    }
+    100% {
+        transform:translateX(0);
+    }
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background: #f6f5f7;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+
+
+.divpageproduits{
+
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;*/
+    display: flex;
+    border-color: red;
+    left: 0px;
+}
+
+.divproduits{
+    justify-content: start;
+    width: 500x;
+    display: flex;
+    flex-wrap: wrap;
+    border: red;
+    margin: 5px;
+    background-color: none;
+    font-family:'Open Sans', sans-serif ;
+    padding-left: 50px;
+}
+
+.nameproduits{
+    border: red;
+    height: 70px;
+}
+
+.imgproduits{
+    border: red;
+    object-position: 20% 30%;
+    margin: 8px;
+    margin-left: 50px;
+}
+
+.filtresproduits{
+    display: none!important;
+    background-color: #FF4B2BFF;
+    background: -webkit-linear-gradient(to right, #FF4B2BFF, #ff4938);
+    background: linear-gradient(to right, #FF4B2BFF, #ff4938);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 0.5%;
+    background-color: #f2f2f2;
+    width: 1300px;
+    height: 100vh;
+    border-color: blue;
+    border:none;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 7px rgba(0,0,0,0.25),
+    0 5px 7px rgba(0,0,0,0.22);
+}
+.filtresproduits h1 {
+    justify-self: center;
+    left: 20%;
+}
+.produits {
+    width: 200px;
+    height: 250px;
+    background-color:rgb(243, 242, 242);
+    padding: 40px;
+    margin: 5px;
+    border:none;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.17),
+    0 10px 10px rgba(0,0,0,0.15);
+}
+
+.infosproduits{
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.prixproduits{
+    margin-top: 20px;
+}
