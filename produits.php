@@ -37,6 +37,8 @@ unset($_SESSION['lastproductid']);
     
         <div class="divproduits">
             <?php
+            // $sql = "CALL listproducts"; 
+            // For the final test i had to do a stored procedure but for the host service i couldn't manage stored procedure so i stayed on declared SQL query  
             $sql = "select ID, Nom, Prix, Categorie  from proteines";
             $result = mysqli_query($mysqli, $sql);
             while ($row = mysqli_fetch_array($result)) {

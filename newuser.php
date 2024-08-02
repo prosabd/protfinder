@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once "db.php";
-if (isset ($_SESSION['lastproductid'])) {
-    $lastproductid = $_SESSION['lastproductid'];
+if (isset($_SESSION['lastproductid'])) {
+        $lastproductid = $_SESSION['lastproductid'];
 }
 ?>
 
@@ -12,25 +12,25 @@ if (isset ($_SESSION['lastproductid'])) {
 //        $login = $_GET["login"];
 //        $password1 = $_GET["passwordsignin"];
 //        $username = $_GET["username"];
-        $mail = $_GET["email"];
-        $password2 = $_GET["passwordsignup"];
-        $password3 = $_GET["passwordconfirm"];
-        $firstname = $_GET["firstname"];
-        $name = $_GET["name"];
+$mail = $_GET["email"];
+$password2 = $_GET["passwordsignup"];
+$password3 = $_GET["passwordconfirm"];
+$firstname = $_GET["firstname"];
+$name = $_GET["name"];
 //        $phone = $_GET["phonenumber"];
-        $adress = $_GET["adress"];
+$adress = $_GET["adress"];
 
 //        $login = addslashes($login);
 //        $password1 = addslashes($password1);
 //        $username = addslashes($username);
-        $mail = addslashes($mail);
-        $password2 = addslashes($password2);
-        $password3 = addslashes($password3);
-        $firstname = addslashes($firstname);
-        $name = addslashes($name);
+$mail = addslashes($mail);
+$password2 = addslashes($password2);
+$password3 = addslashes($password3);
+$firstname = addslashes($firstname);
+$name = addslashes($name);
 //        $phone = addslashes($phone);
-        $adress = addslashes($adress);
-        
+$adress = addslashes($adress);
+
 
 
 
@@ -59,11 +59,10 @@ $_SESSION['valid'] = true;
 
 
 
-if (isset ($_SESSION['lastproductid'])) {
-    header("Location: /protfinder/produit.php?id=" . $lastproductid);
-}
-else{
-    header("Location: /protfinder/produits.php");
+if (isset($_SESSION['lastproductid'])) {
+        header("Location: /produit.php?id=" . $lastproductid);
+} else {
+        header("Location: /produits.php");
 }
 
 

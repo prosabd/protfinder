@@ -22,19 +22,17 @@ $idproduct = $_GET["get_id"];
 if (isset($_SESSION['iduser'])) {
     $iduser = $_SESSION['iduser'];
     $_SESSION['iduser'] = $iduser;
-    $sql2 = "select * from panier where iduser = " . $iduser . " and idproduit = " . $idproduct ;
+    $sql2 = "select * from panier where iduser = " . $iduser . " and idproduit = " . $idproduct;
     $result2 = mysqli_query($mysqli, $sql2);
     $rowcount = mysqli_num_rows($result2);
-        $sqlremove = "DELETE from panier where iduser = " . $iduser . " and idproduit = " . $idproduct;
-        $resultremove = mysqli_query($mysqli, $sqlremove);
+    $sqlremove = "DELETE from panier where iduser = " . $iduser . " and idproduit = " . $idproduct;
+    $resultremove = mysqli_query($mysqli, $sqlremove);
 
-    header('location: /protfinder/cart.php');
+    header('location: /cart.php');
 
-//    $idpanier = $row["ID"];
+    //    $idpanier = $row["ID"];
 
 
-}
-
-else{
-    header('location: /protfinder/cart.php');
+} else {
+    header('location: /cart.php');
 }
